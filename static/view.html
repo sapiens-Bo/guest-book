@@ -1,11 +1,11 @@
 <h1>Guestbook</h1>
 <div>
-  X total signature
+  {{.SignatureCount}} total signature
   <a href="/guestbook/new">Add your signature</a>
 </div>
 
 <div>
-  <p>Sgnature</p>
-  <p>go</p>
-  <p>here</p>
+  {{range .Signatures}}
+    <p>{{.}}</p>
+  {{end}}
 </div> 
